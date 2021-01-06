@@ -6,6 +6,8 @@ adds support for Chinese, Korean, and Japanese characters. Since it adds
 
 Installs dependencies needed in order to run puppeteer on heroku. Be sure to include `{ args: ['--no-sandbox'] }` in your call to `puppeteer.launch`
 
+If you want to use puppeteer with firefox instead of chrome, use this buildpack instead: https://github.com/jontewks/heroku-buildpack-puppeteer-firefox
+
 ## Usage
 
 To use the latest stable version from source code in this repository:
