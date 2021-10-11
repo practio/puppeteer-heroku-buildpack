@@ -1,5 +1,10 @@
-#!/usr/bin/env bash
-# bin/detect <build-dir>
+#!/bin/sh
+#
+# Does this buildpack apply to this application?
+#
+# Called by Heroku:
+# bin/detect BUILD_DIR
+#
 
-echo "Puppeteer"
+echo "Custom Fonts"
 exit 0

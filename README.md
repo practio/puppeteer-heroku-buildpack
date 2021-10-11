@@ -1,21 +1,22 @@
-# puppeteer-heroku-buildpack
+# Heroku Buildpack for Custom Fonts
 
-**This fork of the [jontewks buildpack](https://elements.heroku.com/buildpacks/jontewks/puppeteer-heroku-buildpack)
-adds support for Chinese, Korean, and Japanese characters. Since it adds
-22MBs for the font files, I've kept it as a separate build pack.**
+Fonts used by [Practio](https://www.practio.com) for printing documents.
 
-Installs dependencies needed in order to run puppeteer on heroku. Be sure to include `{ args: ['--no-sandbox'] }` in your call to `puppeteer.launch`
+This buildpack is very specific to our needs. It can and will change and **YOUR APP WILL BREAK**.
+Even the fonts in `fonts.tar.gz` are _probably not what you want or expect_.
 
-## Usage
+We'd hate to see that happen. But please feel free to fork it or crib ideas to make it your own, though!
 
-To use the latest stable version from source code in this repository:
+## Development
 
-```sh-session
-$ heroku buildpacks:set https://github.com/CoffeeAndCode/puppeteer-heroku-buildpack.git
+### How to Update Fonts Archive
+
+Move individual TTF files into `fonts`
+
+```
+tar -czvf fonts.tar.gz fonts
 ```
 
-## Issues
+### Original Inspiration
 
-A common issue that people run into often is a cache issue with heroku. Often when you start seeing errors that chrome won't start and some libraries are missing, you can resolve it by clearing your heroku cache. Instructions for that can be found here: https://help.heroku.com/18PI5RSY/how-do-i-clear-the-build-cache
-
-If you are still running into any issues with this buildpack after doing the above, please open an issue on this repo and/or submit a PR that resolves it. Different versions of chrome have different dependencies and so some issues can creep in without me knowing. Thanks!
+- https://github.com/debitoor/heroku-buildpack-converter-fonts
