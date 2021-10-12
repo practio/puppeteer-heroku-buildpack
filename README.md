@@ -11,7 +11,7 @@ We'd hate to see that happen. But please feel free to fork it or crib ideas to m
 
 ### How to Update Fonts Archive
 
-Move individual TTF files into `fonts`
+Move individual TTF (only TTF) files into `fonts`
 
 ```
 tar -czvf fonts.tar.gz fonts
@@ -19,4 +19,5 @@ tar -czvf fonts.tar.gz fonts
 
 ### Original Inspiration
 
+- https://github.com/CoffeeAndCode/puppeteer-heroku-buildpack
 - https://github.com/debitoor/heroku-buildpack-converter-fonts
